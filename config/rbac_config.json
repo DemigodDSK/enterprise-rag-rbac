@@ -1,0 +1,30 @@
+{
+  "roles": {
+    "admin":      {"categories": ["SOP","POLICIES","RISK_GOVERNANCE","SECURITY","HR","OPERATIONS","ENGINEERING","LEGAL_INTERNAL"], "max_classification": "RESTRICTED",   "can_view_audit_log": true,  "can_manage_users": true},
+    "executive":  {"categories": ["SOP","POLICIES","RISK_GOVERNANCE","SECURITY","HR","OPERATIONS","ENGINEERING","LEGAL_INTERNAL"], "max_classification": "CONFIDENTIAL", "can_view_audit_log": true,  "can_manage_users": false},
+    "compliance": {"categories": ["SOP","POLICIES","RISK_GOVERNANCE","SECURITY","HR","OPERATIONS","LEGAL_INTERNAL"],               "max_classification": "CONFIDENTIAL", "can_view_audit_log": true,  "can_manage_users": false},
+    "security":   {"categories": ["SOP","POLICIES","RISK_GOVERNANCE","SECURITY","ENGINEERING"],                                    "max_classification": "CONFIDENTIAL", "can_view_audit_log": true,  "can_manage_users": false},
+    "manager":    {"categories": ["SOP","POLICIES","HR","OPERATIONS"],                                                              "max_classification": "INTERNAL",     "can_view_audit_log": false, "can_manage_users": false},
+    "employee":   {"categories": ["POLICIES","HR"],                                                                                 "max_classification": "INTERNAL",     "can_view_audit_log": false, "can_manage_users": false},
+    "contractor": {"categories": ["POLICIES"],                                                                                      "max_classification": "INTERNAL",     "can_view_audit_log": false, "can_manage_users": false}
+  },
+  "users": [
+    {"username": "admin",       "password": "admin123",    "role": "admin",      "department": "IT",         "full_name": "System Admin",         "email": "admin@aureliushealth.com"},
+    {"username": "ceo",         "password": "exec123",     "role": "executive",  "department": "Executive",  "full_name": "Dr. Sarah Chen",       "email": "s.chen@aureliushealth.com"},
+    {"username": "cco",         "password": "comply123",   "role": "compliance", "department": "Compliance", "full_name": "Michael Torres",       "email": "m.torres@aureliushealth.com"},
+    {"username": "ciso",        "password": "secure123",   "role": "security",   "department": "Security",   "full_name": "Rachel Patel",         "email": "r.patel@aureliushealth.com"},
+    {"username": "hr_manager",  "password": "manager123",  "role": "manager",    "department": "HR",         "full_name": "David Kim",            "email": "d.kim@aureliushealth.com"},
+    {"username": "it_manager",  "password": "manager123",  "role": "manager",    "department": "IT",         "full_name": "Jennifer Walsh",       "email": "j.walsh@aureliushealth.com"},
+    {"username": "john",        "password": "employee123", "role": "employee",   "department": "Finance",    "full_name": "John Smith",           "email": "j.smith@aureliushealth.com"},
+    {"username": "jane",        "password": "employee123", "role": "employee",   "department": "Nursing",    "full_name": "Jane Doe",             "email": "j.doe@aureliushealth.com"},
+    {"username": "contractor1", "password": "contract123", "role": "contractor", "department": "IT",         "full_name": "Alex Rivera (Vendor)", "email": "a.rivera@vendorcorp.com"}
+  ],
+  "classification_levels": {"PUBLIC": 1, "INTERNAL": 2, "CONFIDENTIAL": 3, "RESTRICTED": 4},
+  "confidential_documents": [
+    "SOP_IT_Incident_Response.md", "SOP_Data_Access_Approval.md", "Access_Control_Policy.md",
+    "Information_Security_Policy.md", "Logging_and_Monitoring_Policy.md", "Enterprise_Risk_Register.md",
+    "Internal_Audit_Process.md", "Threat_Modeling_Overview.md", "Vulnerability_Management_Process.md",
+    "Employee_NDA.md", "Vendor_Confidentiality_Terms.md", "Business_Continuity_Plan.md",
+    "Disaster_Recovery_Runbook.md", "Data_Flow_Overview.md", "System_Architecture_Overview.md"
+  ]
+}
